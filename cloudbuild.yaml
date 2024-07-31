@@ -28,7 +28,7 @@ steps:
           --region us-central1 \
           --delivery-pipeline=my-run-demo-app-1 \
           --annotations=commitId=${REVISION_ID},gitlink=https://github.com/nateaveryg/gartner-mq-demo-001/commit/${COMMIT_SHA} \
-          --images=service-a=us-central1-docker.pkg.dev/riccardo-blog-test-v1/gartner-mq-demo-app-docker-repo-std/app:$COMMIT_SHA --format="value(image_summary.digest)"
+          --images=app=us-central1-docker.pkg.dev/riccardo-blog-test-v1/gartner-mq-demo-app-docker-repo-std/app:$COMMIT_SHA --format="value(image_summary.digest)"
         
 images:
 - us-central1-docker.pkg.dev/riccardo-blog-test-v1/gartner-mq-demo-app-docker-repo-std/app:${COMMIT_SHA}
